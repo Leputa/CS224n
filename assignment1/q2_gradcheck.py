@@ -36,16 +36,20 @@ def gradcheck_naive(f, x):
         # to test cost functions with built in randomness later.
 
         ### YOUR CODE HERE:
-        # numgrad = (f(x[ix]+h)[0] - f(x[ix]-h)[0])/(2*h) #这里边出现f后会有bug...
+        # numgrad = (f(x[ix]+h)[0] - f(x[ix]-h)[0])/(2*h) #这样写会有bug...
         
-        x[ix] += h
-        fx_plus_h, _ = f(x)
+        old_value = x[ix]
+        x[ix] = old_value + h
+        random.setstate(rndstate)
+        fxh_left = f(x)[0]
 
-        x[ix] -= 2 * h
-        fx_minus_h, _ = f(x)
+        x[ix] = old_value - h
+        random.setstate(rndstate)
+        fxh_right = f(x)[0]
 
-        x[ix] += h
-        numgrad = (fx_plus_h - fx_minus_h) / (2 * h)
+        x[ix] = old_value
+
+        numgrad = (fxh_left - fxh_right)/(2*h) 
         ### END YOUR CODE
 
         # Compare gradients
@@ -57,7 +61,7 @@ def gradcheck_naive(f, x):
                 grad[ix], numgrad))
             return
         it.iternext() # Step to next dimension
-
+        
     print ("Gradient check passed!")
 
 
