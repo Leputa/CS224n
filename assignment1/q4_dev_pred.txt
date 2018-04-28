@@ -34,7 +34,7 @@ True	Predicted	Text
 3	3	woody allen 's latest is an ambling , broad comedy about all there is to love -- and hate -- about the movie biz .
 3	3	it 's a stunning lyrical work of considerable force and truth .
 2	1	the inhospitability of the land emphasizes the spare precision of the narratives and helps to give them an atavistic power , as if they were tales that had been handed down since the beginning of time .
-0	3	-lrb- nã¦s -rrb- directed the stage version of elling , and gets fine performances from his two leads who originated the characters on stage .
+0	3	-lrb- nÃ¦s -rrb- directed the stage version of elling , and gets fine performances from his two leads who originated the characters on stage .
 4	2	a coda in every sense , the pinochet case splits time between a minute-by-minute account of the british court 's extradition chess game and the regime 's talking-head survivors .
 4	1	like mike is a winner for kids , and no doubt a winner for lil bow wow , who can now add movies to the list of things he does well .
 3	3	-lrb- t -rrb- his beguiling belgian fable , very much its own droll and delicate little film , has some touching things to say about what is important in life and why .
@@ -275,7 +275,7 @@ True	Predicted	Text
 4	3	among the year 's most intriguing explorations of alientation .
 3	1	a full world has been presented onscreen , not some series of carefully structured plot points building to a pat resolution .
 4	3	seldom has a movie so closely matched the spirit of a man and his work .
-0	3	audrey tatou has a knack for picking roles that magnify her outrageous charm , and in this literate french comedy , she 's as morning-glory exuberant as she was in amã©lie .
+0	3	audrey tatou has a knack for picking roles that magnify her outrageous charm , and in this literate french comedy , she 's as morning-glory exuberant as she was in amÃ©lie .
 4	3	the movie has an infectious exuberance that will engage anyone with a passing interest in the skate\/surf culture , the l.a. beach scene and the imaginative -lrb- and sometimes illegal -rrb- ways kids can make a playground out of the refuse of adults .
 3	3	even if you do n't think -lrb- kissinger 's -rrb- any more guilty of criminal activity than most contemporary statesmen , he 'd sure make a courtroom trial great fun to watch .
 3	3	the story and structure are well-honed .
@@ -316,7 +316,7 @@ True	Predicted	Text
 3	1	aside from minor tinkering , this is the same movie you probably loved in 1994 , except that it looks even better .
 4	3	uses high comedy to evoke surprising poignance .
 4	3	it confirms fincher 's status as a film maker who artfully bends technical know-how to the service of psychological insight .
-0	4	vera 's three actors -- mollã , gil and bardem -- excel in insightful , empathetic performances .
+0	4	vera 's three actors -- mollÃ  , gil and bardem -- excel in insightful , empathetic performances .
 3	1	a marvel like none you 've seen .
 3	3	with tightly organized efficiency , numerous flashbacks and a constant edge of tension , miller 's film is one of 2002 's involvingly adult surprises .
 4	3	mr. tsai is a very original artist in his medium , and what time is it there ?
@@ -376,7 +376,7 @@ True	Predicted	Text
 4	4	lovely and poignant .
 3	3	puts a human face on a land most westerners are unfamiliar with .
 2	1	i ca n't say that i liked homeboy ; it 'd be more accurate to say that i found it intriguing , bizarre , dogma-like in spots - and quite truthful , in its way .
-0	3	displaying about equal amounts of naivetã© , passion and talent , beneath clouds establishes sen as a filmmaker of considerable potential .
+0	3	displaying about equal amounts of naivetÃ© , passion and talent , beneath clouds establishes sen as a filmmaker of considerable potential .
 3	4	the vitality of the actors keeps the intensity of the film high , even as the strafings blend together .
 4	1	not since japanese filmmaker akira kurosawa 's ran have the savagery of combat and the specter of death been visualized with such operatic grandeur .
 2	3	we learn a lot about dying coral and see a lot of life on the reef .
@@ -544,7 +544,7 @@ True	Predicted	Text
 3	3	all-in-all , the film is an enjoyable and frankly told tale of a people who live among us , but not necessarily with us .
 3	3	an interesting story with a pertinent -lrb- cinematically unique -rrb- message , told fairly well and scored to perfection , i found myself struggling to put my finger on that elusive `` missing thing . ''
 3	4	a movie with a real anarchic flair .
-0	1	without non-stop techno or the existential overtones of a kieslowski morality tale , maelstrã¶m is just another winter sleepers .
+0	1	without non-stop techno or the existential overtones of a kieslowski morality tale , maelstrÃ¶m is just another winter sleepers .
 1	1	nicks , seemingly uncertain what 's going to make people laugh , runs the gamut from stale parody to raunchy sex gags to formula romantic comedy .
 2	3	` a ' for creativity but comes across more as a sketch for a full-length comedy .
 0	1	if there 's one thing this world needs less of , it 's movies about college that are written and directed by people who could n't pass an entrance exam .
@@ -590,7 +590,7 @@ True	Predicted	Text
 2	1	but is that knot from dramatic tension or a symptom of artistic malnutrition ?
 1	1	even with a green mohawk and a sheet of fire-red flame tattoos covering his shoulder , however , kilmer seems to be posing , rather than acting .
 1	3	and that leaves a hole in the center of the salton sea .
-0	1	there 's just no currency in deriding james bond for being a clichã©d , doddering , misogynistic boy 's club .
+0	1	there 's just no currency in deriding james bond for being a clichÃ©d , doddering , misogynistic boy 's club .
 0	1	when the film ended , i felt tired and drained and wanted to lie on my own deathbed for a while .
 2	1	full of witless jokes , dealing in broad stereotypes and outrageously unbelievable scenarios , and saddled with a general air of misogyny
 0	1	the film 's hackneyed message is not helped by the thin characterizations , nonexistent plot and pretentious visual style .
@@ -653,7 +653,7 @@ True	Predicted	Text
 2	4	the film takes the materials of human tragedy and dresses them in lovely costumes , southern california locations and star power .
 1	3	it has its moments of swaggering camaraderie , but more often just feels generic , derivative and done to death .
 0	1	almost gags on its own gore .
-0	1	how do you spell clichã© ?
+0	1	how do you spell clichÃ© ?
 3	3	it 's sweet , harmless , dumb , occasionally funny and about as compelling as a fishing show .
 0	3	the moviegoing equivalent of going to a dinner party and being forced to watch the host and hostess 's home video of their baby 's birth .
 1	1	while -lrb- hill -rrb- has learned new tricks , the tricks alone are not enough to salvage this lifeless boxing film .
