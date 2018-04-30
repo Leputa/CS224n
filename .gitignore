@@ -1,2 +1,3 @@
 *.npy
 /assignment1/utils/datasets/
+/assignment2/data/en-cw.txt
