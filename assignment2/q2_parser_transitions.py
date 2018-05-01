@@ -1,3 +1,4 @@
+
 class PartialParse(object):
     def __init__(self, sentence):
         """Initializes this partial parse.
@@ -21,6 +22,13 @@ class PartialParse(object):
         self.sentence = sentence
 
         ### YOUR CODE HERE
+        self.stack = ['ROOT']
+        # 根据题意，用list来实现，可能效率会比较低
+        # self.buffer = queue.Queue()
+        # for word in sentence:
+        #     self.buffer.put(word)
+        self.buffer = sentence.copy()
+        self.dependencies = []
         ### END YOUR CODE
 
     def parse_step(self, transition):
@@ -32,6 +40,21 @@ class PartialParse(object):
                         transition.
         """
         ### YOUR CODE HERE
+        if transition == 'S':
+            if len(self.buffer) > 0:
+                self.stack.append(self.buffer[0])
+                del self.buffer[0]
+        elif len(self.stack) >= 2:
+            if transition == 'LA':
+                head = self.stack[len(self.stack)-1]
+                tail = self.stack[len(self.stack)-2]
+                del self.stack[len(self.stack)-2]
+                self.dependencies.append((head,tail))
+            else:
+                head = self.stack[len(self.stack)-2]
+                tail = self.stack[len(self.stack)-1]
+                self.stack.pop()
+                self.dependencies.append((head,tail))
         ### END YOUR CODE
 
     def parse(self, transitions):
@@ -66,6 +89,36 @@ def minibatch_parse(sentences, model, batch_size):
     """
 
     ### YOUR CODE HERE
+    partial_parses = []
+
+    # Initialize partial parses as a list of partial parses, one for each sentence in sentences
+    for sentence in sentences:
+        partial_parses.append(PartialParse(sentence))
+
+    # Initialize unfinished parses as a shallow copy of partial parses
+    # b = a
+    # b = a.copy()         浅层复制
+    # b = a.deepcopy()     深层复制
+    # 注意以上三者的区别
+    unfinished_parses = partial_parses.copy()
+
+    while(len(unfinished_parses)!=0):
+        minibatch_parses = unfinished_parses[:batch_size]
+        minibatch_transitions = model.predict(minibatch_parses)
+
+        for i in range(len(minibatch_parses)):
+            parse = minibatch_parses[i]
+            transition = minibatch_transitions[i]
+            parse.parse_step(transition)
+
+        for parse in unfinished_parses:
+            if len(parse.stack) == 1 and len(parse.buffer) == 0:
+                unfinished_parses.remove(parse)
+
+    dependencies = []
+    for partial_parse in partial_parses:
+        dependencies.append(partial_parse.dependencies)
+
     ### END YOUR CODE
 
     return dependencies
@@ -85,7 +138,7 @@ def test_step(name, transition, stack, buf, deps,
         "{:} test resulted in buffer {:}, expected {:}".format(name, buf, ex_buf)
     assert deps == ex_deps, \
         "{:} test resulted in dependency list {:}, expected {:}".format(name, deps, ex_deps)
-    print "{:} test passed!".format(name)
+    print ("{:} test passed!".format(name))
 
 
 def test_parse_step():
@@ -112,7 +165,7 @@ def test_parse():
         "parse test resulted in dependencies {:}, expected {:}".format(dependencies, expected)
     assert tuple(sentence) == ("parse", "this", "sentence"), \
         "parse test failed: the input sentence should not be modified"
-    print "parse test passed!"
+    print ("parse test passed!")
 
 
 class DummyModel(object):
@@ -149,7 +202,7 @@ def test_minibatch_parse():
                       (('only', 'ROOT'), ('only', 'arcs'), ('only', 'left')))
     test_dependencies("minibatch_parse", deps[3],
                       (('again', 'ROOT'), ('again', 'arcs'), ('again', 'left'), ('again', 'only')))
-    print "minibatch_parse test passed!"
+    print ("minibatch_parse test passed!")
 
 if __name__ == '__main__':
     test_parse_step()
